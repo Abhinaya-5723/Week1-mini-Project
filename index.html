@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pokédex — Responsive API App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">Mini <span>Pokédex</span></h1>
+
+      <nav class="nav">
+        <a href="#" class="nav-link">Home</a>
+        <a href="#" class="nav-link">About</a>
+        <a href="#" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="controls">
+        <button id="themeToggle" class="btn small">Toggle Dark</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-content" id="main">
+    <section class="search-section" aria-labelledby="search-heading">
+      <h2 id="search-heading" class="visually-hidden">Search Pokémon</h2>
+      <form id="searchForm" class="search-form" role="search">
+        <input id="searchInput" type="search" placeholder="Search by name or id (e.g., pikachu or 25)" aria-label="Search Pokémon" />
+        <button id="searchBtn" class="btn">Search</button>
+        <button id="resetBtn" type="button" class="btn ghost">Reset</button>
+      </form>
+      <div class="status-row">
+        <div id="loading" class="loading hidden">Loading…</div>
+        <div id="error" class="error hidden" role="alert"></div>
+      </div>
+    </section>
+
+    <section class="cards-section" id="cards" aria-live="polite">
+      <!-- dynamic cards inserted here -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Built with <strong>HTML</strong>, <strong>CSS (Flexbox)</strong> and <strong>JavaScript (Fetch API)</strong>. Data from <a href="https://pokeapi.co" target="_blank" rel="noopener">PokeAPI</a>.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
